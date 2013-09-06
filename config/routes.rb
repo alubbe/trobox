@@ -7,6 +7,10 @@ Trobox::Application.routes.draw do
   root 'pages#index'
   #match '/users/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
 
+  get 'send' => 'send#view', as: :send_view
+  post 'send' => 'send#post'
+  post 'callback' => 'send#callback'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
