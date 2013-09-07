@@ -7,7 +7,8 @@ class Document < ActiveRecord::Base
 
   attr_accessor :file
 
-  before_save :upload_file_to_box
+  before_create :upload_file_to_box
+  before_update :update_file_in_box
 
 
   def upload_file_to_box
@@ -23,5 +24,10 @@ class Document < ActiveRecord::Base
     folder = user.box_client.folder("/trobox")
     folder.sync_state = 'synced'
     folder.update
+  end
+
+  def update_file_in_box
+    box_file = user.box_client.file(self.box_file_path).delete
+    upload_file_to_box
   end
 end
