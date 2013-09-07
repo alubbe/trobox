@@ -2,6 +2,10 @@ Trobox::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   
   get 'expose/:id' => 'test#expose'
+  get 'application_overview' => 'pages#application_overview'
+  get 'document_upload' => 'pages#document_upload'
+  get 'landing_page' => 'pages#landing_page'
+  get 'personal_data' => 'pages#personal_data'
   get 'send' => 'send#view', as: :send_view
   post 'send' => 'send#post'
   post 'callback.json' => 'send#callback'

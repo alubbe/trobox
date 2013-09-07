@@ -15,17 +15,6 @@ ActiveRecord::Schema.define(version: 20130906220000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
-  enable_extension "uuid-ossp"
-  enable_extension "postgis"
-
-  create_table "spatial_ref_sys", id: false, force: true do |t|
-    t.integer "srid",                   null: false
-    t.string  "auth_name", limit: 256
-    t.integer "auth_srid"
-    t.string  "srtext",    limit: 2048
-    t.string  "proj4text", limit: 2048
-  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
