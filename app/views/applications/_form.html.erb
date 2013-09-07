@@ -1,65 +1,27 @@
-<%= form_for(@application) do |f| %>
-  <% if @application.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
-
-      <ul>
-      <% @application.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+<div class="w-form formwrapper">
+  <%= form_for(@application) do |f| %>
+    <label class="formtitel">Immobilie updaten</label>
+    <%= f.hidden_field :user_id %>
+    <%= f.label :title, class: 'fieldlabel' %>
+    <%= f.text_field :title, class: "w-input textfield" %>
+    <%= f.label :picture_url, class: 'fieldlabel' %>
+    <%= f.text_field :picture_url, class: "w-input textfield" %>
+    <%= f.label :price, class: 'fieldlabel' %>
+    <%= f.text_field :price, class: "w-input textfield" %>
+    <%= f.label :living_space, class: 'fieldlabel' %>
+    <%= f.text_field :living_space, class: "w-input textfield" %>
+    <%= f.label :rooms, class: 'fieldlabel' %>
+    <%= f.text_field :rooms, class: "w-input textfield" %>
+    <%= f.label :address, class: 'fieldlabel' %>
+    <%= f.text_field :address, class: "w-input textfield" %>
+    <%= f.label :city, class: 'fieldlabel' %>
+    <%= f.text_field :city, class: "w-input textfield" %>
+    <%= f.label :email, class: 'fieldlabel' %>
+    <%= f.text_field :email, class: "w-input textfield" %>
+    <%= f.label :mobile, class: 'fieldlabel' %>
+    <%= f.text_field :mobile, class: "w-input textfield" %>
+    <%= f.label :landline, class: 'fieldlabel' %>
+    <%= f.text_field :landline, class: "w-input textfield" %>
+    <%= f.submit 'Update', class: "w-button submitbutton" %>
   <% end %>
-
-  <div class="field">
-    <%= f.label :immo_id %><br>
-    <%= f.number_field :immo_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :picture_url %><br>
-    <%= f.text_field :picture_url %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :living_space %><br>
-    <%= f.text_field :living_space %>
-  </div>
-  <div class="field">
-    <%= f.label :rooms %><br>
-    <%= f.text_field :rooms %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :mobile %><br>
-    <%= f.text_field :mobile %>
-  </div>
-  <div class="field">
-    <%= f.label :landline %><br>
-    <%= f.text_field :landline %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
