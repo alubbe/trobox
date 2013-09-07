@@ -31,6 +31,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-box2'
+gem 'ruby-box', github: 'Varek/ruby-box'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

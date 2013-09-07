@@ -1,2 +1,4 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<%= link_to "Sign in with box", user_omniauth_authorize_path(:box) %>
+
+<br><br>
+<%= link_to "Sign in with box as agent", user_omniauth_authorize_path(:box, agent: true, application_id: '1337') %>
