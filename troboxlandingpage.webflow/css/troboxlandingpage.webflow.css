@@ -1,0 +1,267 @@
+body {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  background-image: url(../images/example-bg.png);
+  background-size: 125px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+h1 {
+  margin: 25px 0px 26px;
+  padding-top: 100px;
+  font-family: Lato, sans-serif;
+  font-size: 60px;
+  line-height: 75px;
+  font-weight: 700;
+  text-indent: 15px;
+}
+h2 {
+  margin: 0px 0px 10px;
+  font-family: Varela, sans-serif;
+  color: white;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+  text-indent: 15px;
+}
+h3 {
+  margin: 10px 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.bodyclass {
+  height: auto;
+  float: none;
+  border: 1px solid black;
+  background-color: white;
+  background-image: none;
+}
+.headerclass {
+  height: 80px;
+  background-color: #474747;
+}
+.mainclass {
+  border: 0px solid black;
+  background-color: white;
+}
+.footerclass {
+  border-top: 2px solid black;
+  background-color: #292929;
+}
+.fieldlabel {
+  position: static;
+  display: block;
+  width: 265px;
+  margin-bottom: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  float: left;
+  clear: left;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: Varela, sans-serif;
+  text-indent: 0px;
+  text-transform: capitalize;
+}
+.formwrapper {
+  display: block;
+  width: 600px;
+  margin: 12px auto 80px;
+  padding-left: 0px;
+  float: none;
+}
+.textfield {
+  display: block;
+  width: 195px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  padding-right: 12px;
+  float: right;
+  border-radius: 5px;
+  font-family: Varela, sans-serif;
+}
+.form {
+  margin-top: 70px;
+  padding: 15px 10px 10px;
+  border: 0px solid black;
+  border-radius: 5px;
+  box-shadow: #949494 0px 0px 6px 0px;
+}
+.submitbutton {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 12px;
+  float: right;
+  clear: left;
+  border: 0px solid black;
+  border-radius: 5px;
+  background-color: #00aeef;
+  background-image: none;
+  box-shadow: none;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  line-height: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.submitbutton:active {
+  background-color: #2b80bf;
+}
+.formtitel {
+  position: static;
+  display: block;
+  width: 320px;
+  margin: 5px auto 20px;
+  float: left;
+  clear: none;
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 700;
+  text-align: left;
+}
+.formtitel.formtitelklein {
+  color: #333;
+}
+.fotoupload {
+  width: 198px;
+  margin: 0px 0px 10px;
+  float: left;
+  font-family: Varela, sans-serif;
+  color: #2b80bf;
+  font-size: 12px;
+  text-align: left;
+}
+.logo {
+  height: 47px;
+  margin-top: 15px;
+  margin-left: 15px;
+  float: none;
+}
+.uploadbutton {
+  height: 20px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 1px 5px;
+  float: right;
+  border: 0px solid black;
+  border-radius: 3px;
+  background-color: #2b80bf;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  color: white;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+.uploadbutton:hover {
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.uploadbutton:active {
+  background-color: #00aeef;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.uploadbutton.smallbutton {
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.uploadbutton:active.smallbutton:active {
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.downloadlinks {
+  margin-top: 5px;
+  padding-top: 0px;
+  float: left;
+  font-family: Varela, sans-serif;
+  color: #2b80bf;
+  font-size: 12px;
+  line-height: 28px;
+}
+.hr {
+  height: 2px;
+  clear: left;
+  border: 0px solid black;
+  box-shadow: rgba(255, 255, 255, 0.49) 0px 1px 0px 0px inset;
+}
+.formtitelklein {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+}
+.backgroundimage {
+  height: 500px;
+  margin-top: -25px;
+  border: 0px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../images/backgroundImage.jpg);
+  background-position: 50% 0px;
+  background-size: 100%;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: scroll;
+  letter-spacing: 0px;
+}
+.linkblock {
+  width: 800px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: -webkit-radial-gradient(circle at 50% 50%, #2e2e2e, #474747 37%, #5e5e5e 62%, #737373 82%, #8c8b8b);
+  background-image: -o-radial-gradient(circle at 50% 50%, #2e2e2e, #474747 37%, #5e5e5e 62%, #737373 82%, #8c8b8b);
+  background-image: radial-gradient(circle at 50% 50%, #2e2e2e, #474747 37%, #5e5e5e 62%, #737373 82%, #8c8b8b);
+  opacity: 0.75;
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 479px) {
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  body {
+    background-image: url("http:/hw-cdn-prod-assets.webflow.com/placeholder/example-bg@2x.png");
+    background-size: 125px;
+  }
+}
