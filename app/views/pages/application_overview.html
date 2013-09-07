@@ -33,7 +33,7 @@
       <input type="checkbox" name="agbs" value="agree"> &nbsp; Ich habe die AGBs gelesen und erkläre mich damit einverstanden.
       <br>
     </div>
-    <% if Application.all.sample(1).first.applied %>
+    <% if Application.first.applied %>
         <button disabled='disabled' class="w-button submitbutton" style='background-color: grey;'> Bewerbung abgeschickt</button>
     <% else%>
       <%= submit_tag "Bewerbung abschicken", class: "w-button submitbutton" %>
