@@ -33,6 +33,11 @@ gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-box2'
 gem 'tropo-webapi-ruby'
+gem 'thin'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
