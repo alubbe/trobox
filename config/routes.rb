@@ -23,7 +23,7 @@ Trobox::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'pages#index'
+  root 'pages#landing_page'
   #match '/users/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
 
   # Example of regular route:

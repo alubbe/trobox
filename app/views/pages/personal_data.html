@@ -1,42 +1,212 @@
-  <header class="headerclass">
-    <img class="logo" src="images/troboxallsmall.png" width="207" height="51.5" alt="troboxallsmall.png">
-  </header>
-  <div class="mainclass">
-    <div class="w-container bodyclass">
-      <div class="w-form formwrapper">
-        <form class="w-clearfix form" name="email-form" data-name="Email Form">
-          <label class="formtitel">Persönliche Daten</label>
-          <label class="fieldlabel" for="email">Name:</label>
-          <input class="w-input textfield" type="text" placeholder="Mustermann" name="name" data-name="Name" required="required"></input>
-          <label class="fieldlabel" for="email">Vorname:</label>
-          <input class="w-input textfield" type="text" placeholder="Max" name="vorname" data-name="Vorname" required="required"></input>
-          <label class="fieldlabel" for="email">Email:</label>
-          <input class="w-input textfield" type="text" placeholder="max@mustermann.de" name="email" data-name="Email" required="required"></input>
-          <label class="fieldlabel" for="email">Tel. Nr:</label>
-          <input class="w-input textfield" type="text" placeholder="01234-567890" name="telnr" data-name="TelNr" required="required"></input>
-          <label class="fieldlabel" for="email">Handy Nr:</label>
-          <input class="w-input textfield" type="text" placeholder="0123-4567890" name="mobil" data-name="Mobil" required="required"></input>
-          <label class="fieldlabel" for="email">Straße, Nr:</label>
-          <input class="w-input textfield" type="text" placeholder="Beispielstr.1" name="strasse" data-name="Strasse" required="required"></input>
-          <label class="fieldlabel" for="email">PLZ:</label>
-          <input class="w-input textfield" type="text" placeholder="12345" name="plz" data-name="PLZ" required="required"></input>
-          <label class="fieldlabel" for="email">Stadt:</label>
-          <input class="w-input textfield" type="text" placeholder="Berlin" name="stadt" data-name="Stadt" required="required"></input>
-          <label class="fieldlabel" for="email">Geb. Datum:</label>
-          <input class="w-input textfield" type="text" placeholder="01.01.1990" name="date" data-name="Date" required="required"></input>
-          <label class="fieldlabel" for="email">geb. Ort:</label>
-          <input class="w-input textfield" type="text" placeholder="Musterstadt" name="birthplace" data-name="BirthPlace" required="required"></input>
-          <label class="fieldlabel" for="email">Nationalität:</label>
-          <input class="w-input textfield" type="text" placeholder="Deutsch" name="nationality" data-name="Nationality" required="required"></input><a class="fotoupload" href="#">Foto hochladen (optional)</a>
-          <input class="w-button submitbutton" type="submit" value="  Speichern " data-wait="Bitte warten..."></input>
-        </form>
-        <div class="w-form-done">
-          <p>Thank you! Your submission has been received!</p>
-        </div>
-        <div class="w-form-fail">
-          <p>Oops! Something went wrong while submitting the form :(</p>
-        </div>
-      </div>
-    </div>
+<div class="w-form formwrapper">
+  <form class="w-clearfix form" name="email-form" data-name="Email Form">
+    <label class="formtitel">Persönliche Daten</label>
+    <label class="fieldlabel" for="email">Name:</label>
+    <input class="w-input textfield" type="text" placeholder="Mustermann" name="name" data-name="Name" required="required"></input>
+    <label class="fieldlabel" for="email">Vorname:</label>
+    <input class="w-input textfield" type="text" placeholder="Max" name="vorname" data-name="Vorname" required="required"></input>
+    <label class="fieldlabel" for="email">Email:</label>
+    <input class="w-input textfield" type="text" placeholder="max@mustermann.de" name="email" data-name="Email" required="required"></input>
+    <label class="fieldlabel" for="email">Tel. Nr:</label>
+    <input class="w-input textfield" type="text" placeholder="01234-567890" name="telnr" data-name="TelNr" required="required"></input>
+    <label class="fieldlabel" for="email">Handy Nr:</label>
+    <input class="w-input textfield" type="text" placeholder="0123-4567890" name="mobil" data-name="Mobil" required="required"></input>
+    <label class="fieldlabel" for="email">Straße, Nr:</label>
+    <input class="w-input textfield" type="text" placeholder="Beispielstr.1" name="strasse" data-name="Strasse" required="required"></input>
+    <label class="fieldlabel" for="email">PLZ:</label>
+    <input class="w-input textfield" type="text" placeholder="12345" name="plz" data-name="PLZ" required="required"></input>
+    <label class="fieldlabel" for="email">Stadt:</label>
+    <input class="w-input textfield" type="text" placeholder="Berlin" name="stadt" data-name="Stadt" required="required"></input>
+    <label class="fieldlabel" for="email">Geb. Datum:</label>
+    <input class="w-input textfield" type="text" placeholder="01.01.1990" name="date" data-name="Date" required="required"></input>
+    <label class="fieldlabel" for="email">geb. Ort:</label>
+    <input class="w-input textfield" type="text" placeholder="Musterstadt" name="birthplace" data-name="BirthPlace" required="required"></input>
+    <label class="fieldlabel" for="email">Nationalität:</label>
+    <input class="w-input textfield" type="text" placeholder="Deutsch" name="nationality" data-name="Nationality" required="required"></input><a class="fotoupload" href="#">Foto hochladen (optional)</a>
+    <input class="w-button submitbutton" type="submit" value="  Speichern " data-wait="Bitte warten..."></input>
+  </form>
+  <div class="w-form-done">
+    <p>Thank you! Your submission has been received!</p>
   </div>
-  <footer class="footerclass"></footer>
+  <div class="w-form-fail">
+    <p>Oops! Something went wrong while submitting the form :(</p>
+  </div>
+</div>
+<style>
+  .bodyclass {
+    border: 0;
+  }
+  .fieldlabel {
+    line-height: 24px;
+  }
+  body {
+    display: block;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    background-size: 125px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  h1 {
+    margin: 10px 0px;
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+  h2 {
+    margin: 10px 0px;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+  }
+  h3 {
+    margin: 10px 0px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  h4 {
+    margin: 10px 0px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  h5 {
+    margin: 10px 0px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+  h6 {
+    margin: 10px 0px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  .button {
+    display: inline-block;
+    padding: 4px 15px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  .bodyclass {
+    height: auto;
+    float: none;
+    background-color: white;
+    background-image: none;
+  }
+  .headerclass {
+    height: 80px;
+    background-color: #474747;
+  }
+  .mainclass {
+    background-color: white;
+  }
+  .footerclass {
+    border-top: 2px solid black;
+    background-color: #292929;
+  }
+  .fieldlabel {
+    width: 115px;
+    margin-bottom: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Varela, sans-serif;
+    text-indent: 0px;
+    text-transform: capitalize;
+  }
+  .formwrapper {
+    display: block;
+    width: 340px;
+    margin: 12px auto 80px;
+    padding-left: 0px;
+    float: none;
+  }
+  .textfield {
+    display: block;
+    width: 195px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+    padding-right: 12px;
+    float: right;
+    border-radius: 5px;
+    font-family: Varela, sans-serif;
+  }
+  .form {
+    margin-top: 70px;
+    padding: 15px 10px 10px;
+    border: 0px solid black;
+    border-radius: 5px;
+    box-shadow: #949494 0px 0px 6px 0px;
+  }
+  .submitbutton {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 12px;
+    float: right;
+    border: 0px solid black;
+    border-radius: 5px;
+    background-color: #00aeef;
+    background-image: none;
+    box-shadow: none;
+    font-family:'Open Sans', sans-serif;
+    color: white;
+    line-height: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+  .submitbutton:active {
+    background-color: #2b80bf;
+  }
+  .formtitel {
+    display: block;
+    width: 320px;
+    margin: 5px auto 20px;
+    float: none;
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .fotoupload {
+    width: 198px;
+    margin: 0px 2px 10px 1px;
+    float: left;
+    font-family: Varela, sans-serif;
+    color: #2b80bf;
+    font-size: 12px;
+    line-height: 28px;
+    text-align: left;
+  }
+  .logo {
+    height: 47px;
+    margin-top: 15px;
+    margin-left: 15px;
+    float: none;
+  }
+  @media (max-width: 991px) {
+  }
+  @media (max-width: 767px) {
+  }
+  @media (max-width: 479px) {
+  }
+  @media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    body {
+      background-image: url("http:/hw-cdn-prod-assets.webflow.com/placeholder/example-bg@2x.png");
+      background-size: 125px;
+    }
+  }
+</style>

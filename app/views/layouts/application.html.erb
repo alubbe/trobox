@@ -5,8 +5,8 @@
     <title>ProfileOverview</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag    "pages", media: "all" %>
-    <%= javascript_include_tag "pages" %>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
     <script>
@@ -19,11 +19,20 @@
     <link rel="icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
   </head>
   <body>
+    <header class="headerclass">
+      <a href="<%= root_path %>">
+        <img class="logo" src="<%= image_path('troboxallsmall.png') %>" width="207" height="51.5" alt="troboxallsmall.png">
+      </a>
+    </header>
+    <div class="mainclass">
+      <div class="w-container bodyclass">
 
-  <% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
-  <% end -%>
-  <%= yield %>
-  
+      <% flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, class: name %>
+      <% end -%>
+      <%= yield %>
+      </div>
+    </div>
+    <footer class="footerclass"></footer>
   </body>
 </html>
