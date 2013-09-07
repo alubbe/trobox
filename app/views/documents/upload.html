@@ -8,29 +8,37 @@
 <% end %>
 -->
 <div class="w-form formwrapper">
-  <form class="w-clearfix form" name="email-form" data-name="Email Form">
+  <div class="w-clearfix form" name="email-form" data-name="Email Form">
     <label class="formtitel">Dokumente</label>
     <label class="fieldlabel" for="email">Schufa Auskunft</label>
-    <%= render 'form', document: documents[0] %>
+    <div style="float:right"><%= render 'form', document: @documents[0] %></div>
     <!--input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>-->
     <label class="fieldlabel" for="email">Kopie Personalausweis</label>
-    <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>
+    <div style="float:right"><%= render 'form', document: @documents[1] %></div>
+<!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <label class="fieldlabel" for="email">Einkommensnachweis</label>
-    <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>
+    <div style="float:right"><%= render 'form', document: @documents[2] %></div>
+<!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <label class="fieldlabel" for="email">Mietzahlungsbestätigung</label><a class="downloadlinks" href="#">Vorlage downloaden</a>
-    <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>
+    <div style="float:right"><%= render 'form', document: @documents[3] %></div>
+<!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <div class="w-embed hr">
       <hr>
     </div>
     <label class="formtitelklein">optional</label>
     <label class="fieldlabel" for="email">WBS-Schein</label>
-    <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>
+    <div style="float:right"><%= render 'form', document: @documents[4] %></div>
+<!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <label class="fieldlabel" for="email">Bürgschaftserklärung</label><a class="downloadlinks" href="#">Vorlage downloaden</a>
-    <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>
+    <div style="float:right"><%= render 'form', document: @documents[5] %></div>
+<!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <label class="fieldlabel" for="email">Kopie Personalausweis (Bürge)</label>
-    <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>
-    <input class="w-button submitbutton" type="submit" value="  Speichern " data-wait="Bitte warten..."></input>
-  </form>
+    <div style="float:right"><%= render 'form', document: @documents[6] %></div>
+<!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
+    <a href="<%= url_for({:controller => 'pages', :action => 'application_overview'}) %>">
+      <input class="w-button submitbutton" type="submit" value="  Speichern " data-wait="Bitte warten..."></input>
+    </a>
+  </div>
   <div class="w-form-done">
     <p>Thank you! Your submission has been received!</p>
   </div>
@@ -39,6 +47,10 @@
   </div>
 </div>
 <style>
+  .special {
+    display: inline-block;
+    width: 100px;
+  }
   body {
     display: block;
     margin-right: auto;

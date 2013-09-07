@@ -18,8 +18,8 @@
     </div>
     <label class="formtitelklein">Bewerberprofil</label>
     <label class="customeridemail">max@mustermann.de</label><a class="downloadlinks" href="#">weitere Bewerber hinzufügen</a>
-    <label class="fieldlabel" for="email">Persönliche Daten</label><a class="uploadbutton" href="#">Bearbeiten</a>
-    <label class="fieldlabel" for="email">Dokumente</label><a class="uploadbutton" href="#">Bearbeiten</a>
+    <label class="fieldlabel" for="email">Persönliche Daten</label><a class="uploadbutton" href="<%= url_for({:controller => 'pages', :action => 'personal_data'}) %>">Bearbeiten</a>
+    <label class="fieldlabel" for="email">Dokumente</label><a class="uploadbutton" href="<%= url_for({:controller => 'documents', :action => 'upload'}) %>">Bearbeiten</a>
     <div class="w-embed hr">
       <hr>
     </div>

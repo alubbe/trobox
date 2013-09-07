@@ -1,8 +1,6 @@
 <% document ||= @document %>
 <%= form_for(document) do |f| %>
-  <%= f.file_field :file%>
+  <%= f.file_field :file, class: 'special', value: 'Auswaehlen' %>
   <%= f.hidden_field :document_type %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit value: 'Hochladen'%>
 <% end %>
