@@ -1,24 +1,26 @@
 <div class="w-form formwrapper">
   <form class="w-clearfix form" name="email-form" data-name="Email Form">
     <div style="w-clearfix;clear:both;height:100px">
-      <img src="" style="float:left;height:120px;width:160px;border 1px solid black;">
-      <div style="float:right;width:400px;margin-top:-5px;padding-top:0;" class="formtitel">
-        Zieh endlich aus bei Mama!
-        <div style="font-size: 20px;">
-          Schönhauser Allee 109
+      <a href="http://www.immobilienscout24.de/expose/71237971" class="peterer" target="_blank">
+        <img src="http://picture.immobilienscout24.de/pic/orig04/N/205/941/419/205941419-0.jpg/ORIG/resize/400x300%3E/format/jpg?4190339800" style="float:left;height:120px;width:160px;">
+        <div style="float:right;width:400px;margin-top:-5px;padding-top:0;font-size: 21px;" class="formtitel">
+            TRAUMWOHNUNG: 4 Zimmer * 3. OG * EBK * Neubau * Balkon * 3m Deckenhöhe
+          <div style="font-size: 18px;font-weight:normal">
+            Inselstraße 10, 10179 Berlin
+          </div>
+          <div style="font-size: 18px;font-weight:normal;">
+            1,970.00 EUR, 4 Zimmer, 127 m²
+          </div>
         </div>
-        <div style="font-size: 20px;">
-          900$, 2 Zimmer, 44 qm
-        </div>
-      </div>
-      &nbsp;
+        &nbsp;
+      </a>
     </div>
     <div class="w-embed hr" style="position:relative; top:20px;">
       <hr>
     </div>
     <label class="formtitelklein">Bewerberprofil</label>
-    <label class="customeridemail">max@mustermann.de</label><a class="downloadlinks" href="#">weitere Bewerber hinzufügen</a>
-    <label class="fieldlabel" for="email">Persönliche Daten</label><a class="uploadbutton" href="<%= url_for({:controller => 'pages', :action => 'personal_data'}) %>">Bearbeiten</a>
+    <label class="customeridemail">andreaslubbe@gmail.com</label><a class="downloadlinks" href="#">weitere Bewerber hinzufügen</a>
+    <label class="fieldlabel" for="email">Persönliche Daten</label><a class="uploadbutton" href="<%= edit_user_path current_user %>">Bearbeiten</a>
     <label class="fieldlabel" for="email">Dokumente</label><a class="uploadbutton" href="<%= url_for({:controller => 'documents', :action => 'upload'}) %>">Bearbeiten</a>
     <div class="w-embed hr">
       <hr>
@@ -31,8 +33,14 @@
       <input type="checkbox" name="agbs" value="agree"> &nbsp; Ich habe die AGBs gelesen und erkläre mich damit einverstanden.
       <br>
     </div>
-    <input class="w-button submitbutton" type="submit" value="Bewerbung abschicken" data-wait="Bitte warten..."></input>
+    <input class="w-button submitbutton" type="button" value="Bewerbung abschicken" data-wait="Bitte warten..."></input>
   </form>
   <div class="w-form-done"></div>
   <div class="w-form-fail"></div>
 </div>
+
+<style type="text/css">
+  .peterer:visited {
+    color: rgb(51, 51, 51);
+  }
+</style>

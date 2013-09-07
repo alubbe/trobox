@@ -37,7 +37,7 @@ class DocumentsController < ApplicationController
     @document = Document.new(document_params.merge({user_id: current_user.id}))
     @document.save
 
-    redirect_to documents_url
+    redirect_to 'document_upload'
   end
 
   # PATCH/PUT /documents/1

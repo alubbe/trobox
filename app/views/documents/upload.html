@@ -11,29 +11,29 @@
   <div class="w-clearfix form" name="email-form" data-name="Email Form">
     <label class="formtitel">Dokumente</label>
     <label class="fieldlabel" for="email">Schufa Auskunft</label>
-    <div style="float:right"><%= render 'form', document: @documents[0] %></div>
+    <% if not @documents[0].persisted? %><div style="float:right"><%= render 'form', document: @documents[0] %></div><% end %>
     <!--input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>-->
     <label class="fieldlabel" for="email">Kopie Personalausweis</label>
-    <div style="float:right"><%= render 'form', document: @documents[1] %></div>
+    <% if not @documents[1].persisted? %><div style="float:right"><%= render 'form', document: @documents[1] %></div><% end %>
 <!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <label class="fieldlabel" for="email">Einkommensnachweis</label>
-    <div style="float:right"><%= render 'form', document: @documents[2] %></div>
+    <% if not @documents[2].persisted? %><div style="float:right"><%= render 'form', document: @documents[2] %></div><% end %>
 <!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <label class="fieldlabel" for="email">Mietzahlungsbestätigung</label><a class="downloadlinks" href="#">Vorlage downloaden</a>
-    <div style="float:right"><%= render 'form', document: @documents[3] %></div>
+    <% if not @documents[3].persisted? %><div style="float:right"><%= render 'form', document: @documents[3] %></div><% end %>
 <!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <div class="w-embed hr">
       <hr>
     </div>
     <label class="formtitelklein">optional</label>
     <label class="fieldlabel" for="email">WBS-Schein</label>
-    <div style="float:right"><%= render 'form', document: @documents[4] %></div>
+    <% if not @documents[4].persisted? %><div style="float:right"><%= render 'form', document: @documents[4] %></div><% end %>
 <!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <label class="fieldlabel" for="email">Bürgschaftserklärung</label><a class="downloadlinks" href="#">Vorlage downloaden</a>
-    <div style="float:right"><%= render 'form', document: @documents[5] %></div>
+    <% if not @documents[5].persisted? %><div style="float:right"><%= render 'form', document: @documents[5] %></div><% end %>
 <!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <label class="fieldlabel" for="email">Kopie Personalausweis (Bürge)</label>
-    <div style="float:right"><%= render 'form', document: @documents[6] %></div>
+    <% if not @documents[6].persisted? %><div style="float:right"><%= render 'form', document: @documents[6] %></div><% end %>
 <!--     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input> -->
     <a href="<%= url_for({:controller => 'pages', :action => 'application_overview'}) %>">
       <input class="w-button submitbutton" type="submit" value="  Speichern " data-wait="Bitte warten..."></input>
