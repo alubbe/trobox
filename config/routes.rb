@@ -9,7 +9,7 @@ Trobox::Application.routes.draw do
 
   get 'send' => 'send#view', as: :send_view
   post 'send' => 'send#post'
-  post 'callback' => 'send#callback'
+  post 'callback.json' => 'send#callback'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
