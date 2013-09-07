@@ -1,10 +1,13 @@
 Trobox::Application.routes.draw do
+
+
+  resources :users
   resources :applications
 
   resources :documents
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  
+
   get 'expose/:id' => 'test#expose'
   get 'application_overview' => 'pages#application_overview'
   get 'document_upload' => 'documents#upload'
