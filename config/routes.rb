@@ -2,7 +2,11 @@ Trobox::Application.routes.draw do
 
 
   resources :users
-  resources :applications
+  resources :applications do
+    member do
+      post 'apply'
+    end
+  end
 
   resources :documents
 

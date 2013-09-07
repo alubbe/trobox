@@ -53,7 +53,7 @@ class ApplicationsController < ApplicationController
 
   def apply
     @application.update_attributes(applied: true)
-    redirect_to @application
+    redirect_to '/application_overview'
   end
 
   # DELETE /applications/1
