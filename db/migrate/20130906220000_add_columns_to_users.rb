@@ -8,5 +8,6 @@ class AddColumnsToUsers < ActiveRecord::Migration
     add_column :users, :name, :string
     add_column :users, :token, :string
     add_column :users, :refresh_token, :string
+    add_column :users, :token_expires_at, :datetime
   end
 end

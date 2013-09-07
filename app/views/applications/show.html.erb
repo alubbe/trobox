@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Immo:</strong>
+  <%= @application.immo_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @application.user_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @application.title %>
+</p>
+
+<p>
+  <strong>Picture url:</strong>
+  <%= @application.picture_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @application.price %>
+</p>
+
+<p>
+  <strong>Living space:</strong>
+  <%= @application.living_space %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @application.rooms %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @application.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @application.email %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @application.mobile %>
+</p>
+
+<p>
+  <strong>Landline:</strong>
+  <%= @application.landline %>
+</p>
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>

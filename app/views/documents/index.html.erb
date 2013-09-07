@@ -1,0 +1,24 @@
+<h1>Listing documents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= 'check' if document.persisted? %>
+        <td><%= document.document_type %></td>
+        <td><%= render 'form', document: document %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Document', new_document_path %>

@@ -1,0 +1,8 @@
+<% document ||= @document %>
+<%= form_for(document) do |f| %>
+  <%= f.file_field :file%>
+  <%= f.hidden_field :document_type %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

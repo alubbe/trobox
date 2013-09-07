@@ -34,6 +34,8 @@ gem 'nokogiri'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-box2'
+gem 'ruby-box', github: 'Varek/ruby-box'
+gem 'enumerize'
 gem 'tropo-webapi-ruby'
 gem 'thin'
 
