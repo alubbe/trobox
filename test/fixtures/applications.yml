@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  immo_id: 1
+  user_id: 1
+  title: MyString
+  picture_url: MyString
+  price: MyString
+  living_space: 1.5
+  rooms: 1.5
+  address: MyString
+  email: MyString
+  mobile: MyString
+  landline: MyString
+
+two:
+  immo_id: 1
+  user_id: 1
+  title: MyString
+  picture_url: MyString
+  price: MyString
+  living_space: 1.5
+  rooms: 1.5
+  address: MyString
+  email: MyString
+  mobile: MyString
+  landline: MyString

@@ -1,4 +1,6 @@
 Trobox::Application.routes.draw do
+  resources :applications
+
   resources :documents
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }

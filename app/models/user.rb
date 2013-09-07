@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
 
   has_many :documents
+  has_many :applications
 
 
    def self.find_or_create_from_box_oauth(auth, type=nil)
