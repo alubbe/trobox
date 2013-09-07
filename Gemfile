@@ -37,7 +37,7 @@ gem 'omniauth-box2'
 gem 'ruby-box', github: 'Varek/ruby-box'
 gem 'enumerize'
 gem 'tropo-webapi-ruby'
-gem 'thin'
+gem 'puma'
 
 group :production do
   gem 'rails_12factor'
