@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:box]
 
 
+  has_many :documents
+
+
    def self.find_or_create_from_box_oauth(auth, type=nil)
     user = User.where(:provider => auth['provider'], :uid => auth['uid']).first
     if user.blank?
@@ -26,7 +29,7 @@ class User < ActiveRecord::Base
 
    def receive_application(application_id)
       folder = box_client.folder("/trobox/#{application_id}") || box_client.folder('/trobox').create_subfolder(application_id)
-      folder.create_subfolder('Peter')
+      #folder.create_subfolder('Peter')
       # sync top level folder after building subfolder tree
       folder = box_client.folder("/trobox")
       folder.sync_state = 'synced'
@@ -48,7 +51,7 @@ class User < ActiveRecord::Base
 
   def update_box_auth_token
     token = box_session.refresh_token(self.refresh_token)
-    update_attributes(token_expires_at: DateTime.strptime("#{auth['credentials']['expires_at']}",'%s'), token: token.token,refresh_token: token.refresh_token)
+    update_attributes(token_expires_at: DateTime.strptime("#{token.expires_at}",'%s'), token: token.token,refresh_token: token.refresh_token)
   end
 
   def create_app_folder

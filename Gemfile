@@ -33,6 +33,8 @@ gem 'omniauth-oauth2'
 gem 'omniauth-box2'
 gem 'ruby-box', github: 'Varek/ruby-box'
 
+gem 'enumerize'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
