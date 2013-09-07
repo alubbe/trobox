@@ -19,8 +19,8 @@ class SendController < ApplicationController
 
   def callback
     t = Tropo::Generator.new
-    t.call(:to => request[:phone], :network => "SMS")
-    t.say(:value => "msg: " + request[:msq] + ". Trobox ist die schönste Anwendung auf der Welt die dich anruft und dir schöne Dinge vorliest. Das wird dir gefallen.")
+    t.call(:to => "+491728859128", :network => "SMS")
+    t.say(:value => "Trobox ist die schönste Anwendung auf der Welt die dich anruft und dir schöne Dinge vorliest. Das wird dir gefallen.")
     render json: t.response
   end
 end
