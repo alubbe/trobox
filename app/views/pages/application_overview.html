@@ -1,5 +1,5 @@
 <div class="w-form formwrapper">
-  <form class="w-clearfix form" name="email-form" data-name="Email Form">
+  <%= form_tag '/applications/1/apply' , class:"w-clearfix form" do %>
     <div style="w-clearfix;clear:both;height:100px">
       <a href="http://www.immobilienscout24.de/expose/71237971" class="peterer" target="_blank">
         <img src="http://picture.immobilienscout24.de/pic/orig04/N/205/941/419/205941419-0.jpg/ORIG/resize/400x300%3E/format/jpg?4190339800" style="float:left;height:120px;width:160px;">
@@ -33,8 +33,12 @@
       <input type="checkbox" name="agbs" value="agree"> &nbsp; Ich habe die AGBs gelesen und erkläre mich damit einverstanden.
       <br>
     </div>
-    <input class="w-button submitbutton" type="button" value="Bewerbung abschicken" data-wait="Bitte warten..."></input>
-  </form>
+    <% if Application.first.applied %>
+        <button disabled='disabled' class="w-button submitbutton" style='background-color: grey;'> Bewerbung abgeschickt</button>
+    <% else%>
+      <%= submit_tag "Bewerbung abschicken", class: "w-button submitbutton" %>
+    <% end %>
+  <% end %>
   <div class="w-form-done"></div>
   <div class="w-form-fail"></div>
 </div>
