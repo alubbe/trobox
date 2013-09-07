@@ -28,6 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
+gem 'nokogiri'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-box2'
