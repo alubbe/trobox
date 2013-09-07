@@ -3,6 +3,8 @@ require 'net/http'
 require 'uri'
 
 class SendController < ApplicationController
+  protect_from_forgery :except => :callback
+
   def view
   end
 
