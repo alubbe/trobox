@@ -21,7 +21,7 @@ class SendController < ApplicationController
     t = Tropo::Generator.new
     t.call(:to => request[:phone], :network => "SMS")
     t.say(:value => "msg: " + request[:msq] + ". Trobox ist die schönste Anwendung auf der Welt die dich anruft und dir schöne Dinge vorliest. Das wird dir gefallen.")
-    t.response
+    render text: t.response
   end
 end
 
