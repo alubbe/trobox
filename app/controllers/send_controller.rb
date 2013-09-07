@@ -9,21 +9,22 @@ class SendController < ApplicationController
   end
 
   def post
-    token = '526f6150554c7a59647243686e71444d79504479484c72656750705964774a536376656546736a6e4b6b4244'
-    url = 'https://tropo.developergarden.com/api/sessions?action=create&token=' + token + '&phone=' + request[:phone] + '&msg=' + request[:message]
+    token = '686b62647a714d79664c796a534b746f4b6e764358465570675a4a6c747556506f794f545a42774e616e7946'
+    url = 'https://tropo.developergarden.com/api/sessions?action=create&token=' + token + '&phone=' + url_encode(request[:phone]) + '&msg=' + url_encode(request[:message])
     uri = URI.parse(url)
     Net::HTTP.get(uri)
-    flash[:notice] = "Message Sent to " + request[:phone] +  "!"
+    flash[:notice] = "Message sent to " + request[:phone] +  "!"
     redirect_to :send_view
   end
 
   def callback
-    # puts "printing the parameters"
-    # puts params[:session][:parameters].inspect
+    puts "printing the parameters"
+    puts params[:session][:parameters].inspect
     t = Tropo::Generator.new
-    t.call(:to => "+491728859128", :network => "SMS")
-    t.say(:value => params[:session][:parameters][:msg])
-    render text: t.response
+    t.call :to => params[:session][:parameters][:phone], :network => "SMS"
+    #t.await 3000
+    t.say :value => params[:session][:parameters][:msg]#, :voice => "Katrin"
+    render json: t.response
   end
 end
 
