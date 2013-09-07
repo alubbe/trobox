@@ -1,3 +1,7 @@
+require 'tropo-webapi-ruby'
+require 'net/http'
+require 'uri'
+
 class ApplicationsController < ApplicationController
   before_action :set_application, only: [:show, :edit, :update, :destroy, :apply]
 
@@ -53,6 +57,10 @@ class ApplicationsController < ApplicationController
 
   def apply
     @application.update_attributes(applied: true)
+    token = '686b62647a714d79664c796a534b746f4b6e764358465570675a4a6c747556506f794f545a42774e616e7946'
+    url = 'https://tropo.developergarden.com/api/sessions?action=create&token=' + token + '&phone=' + url_encode(request[:phone]) + '&msg=' + url_encode(request[:message])
+    uri = URI.parse(url)
+    Net::HTTP.get(uri)
     redirect_to '/application_overview'
   end
 
