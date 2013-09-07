@@ -2,6 +2,9 @@ Trobox::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   
   get 'expose/:id' => 'test#expose'
+  get 'send' => 'send#view', as: :send_view
+  post 'send' => 'send#post'
+  post 'callback.json' => 'send#callback'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

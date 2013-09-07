@@ -1,0 +1,8 @@
+<h1>SEND A MESSAGE</h1>
+<%= form_tag("/send", method: "post") do %>
+  <%= label_tag(:q, "phone:") %>
+  <%= text_field_tag(:phone) %>
+  <%= label_tag(:q, "message:") %>
+  <%= text_field_tag(:message) %>
+  <%= submit_tag("Send") %>
+<% end %>

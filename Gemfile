@@ -32,6 +32,7 @@ gem 'nokogiri'
 gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-box2'
+gem 'tropo-webapi-ruby'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
