@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20130907123043) do
     t.string   "name"
     t.string   "token"
     t.string   "refresh_token"
+    t.datetime "token_expires_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

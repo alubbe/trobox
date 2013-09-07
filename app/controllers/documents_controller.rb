@@ -10,6 +10,13 @@ class DocumentsController < ApplicationController
     end
   end
 
+  def upload
+    @documents = 7.times.map do |i|
+      dt = i+1
+      Document.where(document_type: dt, user_id: current_user.id).first_or_initialize
+    end
+  end
+
   # GET /documents/1
   # GET /documents/1.json
   def show

@@ -1,8 +1,18 @@
+<!--
+<% @documents.each do |document| %>
+  <tr>
+    <td><%= 'check' if document.persisted? %>
+    <td><%= document.document_type %></td>
+    <td><%= render 'form', document: document %></td>
+  </tr>
+<% end %>
+-->
 <div class="w-form formwrapper">
   <form class="w-clearfix form" name="email-form" data-name="Email Form">
     <label class="formtitel">Dokumente</label>
     <label class="fieldlabel" for="email">Schufa Auskunft</label>
-    <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>
+    <%= render 'form', document: documents[0] %>
+    <!--input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>-->
     <label class="fieldlabel" for="email">Kopie Personalausweis</label>
     <input class="w-button uploadbutton" type="submit" value="Hochladen" data-wait="Bitte warten..."></input>
     <label class="fieldlabel" for="email">Einkommensnachweis</label>

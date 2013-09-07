@@ -13,7 +13,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       if @user.persisted?
         @user.create_app_folder
         @user.receive_application(auth_hash['application_id']) if auth_hash['agent'] && auth_hash['application_id']
-        sign_in_and_redirect @user
+        sign_in @user
+        redirect_to '/personal_data'
         #set_flash_message(:notice, :success, :kind => "Box")
       else
         session["devise.box_data"] = request.env["omniauth.auth"]

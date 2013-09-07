@@ -23,7 +23,9 @@
     <input class="w-input textfield" type="text" placeholder="Musterstadt" name="birthplace" data-name="BirthPlace" required="required"></input>
     <label class="fieldlabel" for="email">Nationalität:</label>
     <input class="w-input textfield" type="text" placeholder="Deutsch" name="nationality" data-name="Nationality" required="required"></input><a class="fotoupload" href="#">Foto hochladen (optional)</a>
-    <input class="w-button submitbutton" type="submit" value="  Speichern " data-wait="Bitte warten..."></input>
+    <a href="<%=  url_for({:controller => 'documents', :action => 'upload'}) %>">
+      <input class="w-button submitbutton" type="button" value="  Speichern " data-wait="Bitte warten..."></input>
+    </a>
   </form>
   <div class="w-form-done">
     <p>Thank you! Your submission has been received!</p>

@@ -7,7 +7,7 @@ Trobox::Application.routes.draw do
   
   get 'expose/:id' => 'test#expose'
   get 'application_overview' => 'pages#application_overview'
-  get 'document_upload' => 'pages#document_upload'
+  get 'document_upload' => 'documents#upload'
   get 'landing_page' => 'pages#landing_page'
   get 'personal_data' => 'pages#personal_data'
   get 'send' => 'send#view', as: :send_view
