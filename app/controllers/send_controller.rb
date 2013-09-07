@@ -18,9 +18,11 @@ class SendController < ApplicationController
   end
 
   def callback
+    # puts "printing the parameters"
+    # puts params[:session][:parameters].inspect
     t = Tropo::Generator.new
-    t.call(:to => params[:phone], :network => "SMS")
-    t.say(:value => params[:msg])
+    t.call(:to => "+491728859128", :network => "SMS")
+    t.say(:value => params[:session][:parameters][:msg])
     render text: t.response
   end
 end
